@@ -1,0 +1,25 @@
+topicArn: arn:aws:sns:us-east-1:235368163414:worker-app
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+
+logging:
+  level: INFO
+  loggers:
+    "com.sun.jersey": OFF
+  appenders:
+    - type: console
+    - type: file
+      currentLogFilename: /app/log/app.log
+      threshold: ALL
+      archive: true
+      archivedLogFilenamePattern: /app/log/app-%d.log
+      archivedFileCount: 30
+      timeZone: UTC
+#    - type: syslog
+#      host: logs2.papertrailapp.com
+#     port: ${SYSLOG_PORT:0}
+#      facility: user
+#      threshold: ALL

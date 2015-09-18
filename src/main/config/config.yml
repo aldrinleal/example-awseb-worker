@@ -1,0 +1,11 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+
+topicArn: arn:aws:sns:us-east-1:235368163414:worker-app
+
+logging:
+  level: INFO
+  loggers:
+    "com.sun.jersey": OFF
