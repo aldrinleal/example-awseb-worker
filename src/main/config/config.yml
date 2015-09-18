@@ -9,3 +9,5 @@ logging:
   level: INFO
   loggers:
     "com.sun.jersey": OFF
+  appenders:
+    - type: console
